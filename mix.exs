@@ -19,7 +19,7 @@ defmodule NodePorcelainExample.Mixfile do
   def application do
     [
       mod: {NodePorcelainExample.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :porcelain, :httpoison]
     ]
   end
 
@@ -35,7 +35,10 @@ defmodule NodePorcelainExample.Mixfile do
       {:phoenix, "~> 1.3.0"},
       {:phoenix_pubsub, "~> 1.0"},
       {:gettext, "~> 0.11"},
-      {:cowboy, "~> 1.0"}
+      {:cowboy, "~> 1.0"},
+      {:porcelain, "~> 2.0"},
+      {:httpoison, "~> 0.12.0"},
+      {:poison, "~> 2.0"},
     ]
   end
 end

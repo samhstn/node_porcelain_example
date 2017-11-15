@@ -2,7 +2,7 @@ const routes = [
   {
     method: 'get',
     path: '/',
-    handler: (request, reply) => reply.view('index', { message: 'Hello World' })
+    handler: (request, reply) => setTimeout(() => reply.view('index', { message: 'Hello World' }), 1000)
   },
   {
     method: 'get',

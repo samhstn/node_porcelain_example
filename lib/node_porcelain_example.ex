@@ -1,12 +1,4 @@
 defmodule NodePorcelainExample do
-  @moduledoc """
-  NodePorcelainExample keeps the contexts that define your domain
-  and business logic.
-
-  Contexts are also responsible for managing your data, regardless
-  if it comes from the database, an external API or others.
-  """
-
   require Poison
   require HTTPoison
 
@@ -15,9 +7,7 @@ defmodule NodePorcelainExample do
   @root_url "http://localhost:4444"
 
   @doc"""
-  Can't work out better way to start and end node process
-  Couldn't get https://stackoverflow.com/questions/39772835/how-to-shutdown-an-external-process-that-was-started/39772976#39772976
-  working.
+  See https://stackoverflow.com/questions/39772835/how-to-shutdown-an-external-process-that-was-started/39772976#39772976 for perhaps a better way of doing this.
   """
   def request do
     System.cmd "pkill", ["node"]
